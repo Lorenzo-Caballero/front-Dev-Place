@@ -58,6 +58,7 @@ export const Users = [
       photo: "assets/post/1.jpeg",
       date: "5 mins ago",
       userId: 1,
+      fav:false,
       like: 32,
       comment: 9,
     },
@@ -66,6 +67,7 @@ export const Users = [
       photo: "assets/post/2.jpeg",
       date: "15 mins ago",
       userId: 2,
+      fav:false,
       like: 2,
       comment: 1,
     },
@@ -74,7 +76,9 @@ export const Users = [
       desc: "Every moment is a fresh beginning.",
       photo: "assets/post/3.jpeg",
       date: "1 hour ago",
-      userId: 3,
+      userId: 3,  
+          fav:false,
+
       like: 61,
       comment: 2,
     },
@@ -82,7 +86,8 @@ export const Users = [
       id: 4,
       photo: "assets/post/4.jpeg",
       date: "4 hours ago",
-      userId: 4,
+      userId: 4,      fav:false,
+
       like: 7,
       comment: 3,
     },
@@ -91,7 +96,8 @@ export const Users = [
       photo: "assets/post/5.jpeg",
       date: "5 hours ago",
       userId: 5,
-      like: 23,
+      like: 23,      fav:false,
+
       comment: 5,
     },
     {
@@ -99,7 +105,8 @@ export const Users = [
       photo: "assets/post/6.jpeg",
       date: "1 day ago",
       userId: 6,
-      like: 44,
+      like: 44,      fav:false,
+
       comment: 6,
     },
     {
@@ -108,7 +115,8 @@ export const Users = [
       photo: "assets/post/7.jpeg",
       date: "2 days ago",
       userId: 7,
-      like: 52,
+      like: 52,      fav:false,
+
       comment: 3,
     },
     {
@@ -116,7 +124,8 @@ export const Users = [
       photo: "assets/post/8.jpeg",
       date: "3 days ago",
       userId: 8,
-      like: 15,
+      like: 15,      fav:false,
+
       comment: 1,
     },
     {
@@ -125,7 +134,8 @@ export const Users = [
       photo: "assets/post/9.jpeg",
       date: "5 days ago",
       userId: 9,
-      like: 11,
+      like: 11,      fav:false,
+
       comment: 2,
     },
     {
@@ -133,7 +143,8 @@ export const Users = [
       photo: "assets/post/10.jpeg",
       date: "1 week ago",
       userId: 10,
-      like: 104,
+      like: 104,      fav:false,
+
       comment: 12,
     },
   ];

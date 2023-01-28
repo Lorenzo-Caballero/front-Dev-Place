@@ -1,5 +1,5 @@
 import "./login.css";
-
+import Register from "../../components/register/Register";
 export default function Login() {
   return (
     <div className="login">
@@ -16,9 +16,9 @@ export default function Login() {
             <input placeholder="Password" className="loginInput" />
             <button className="loginButton">Log In</button>
             <span className="loginForgot">Forgot Password?</span>
-            <button className="loginRegisterButton">
+            <Link to={<Register/>}className="loginRegisterButton">
               Create a New Account
-            </button>
+            </Link>
           </div>
         </div>
       </div>
