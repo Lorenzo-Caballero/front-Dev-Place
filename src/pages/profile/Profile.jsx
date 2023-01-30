@@ -16,7 +16,7 @@ export default function Profile() {
             <div className="profileCover">
               <img
                 className="profileCoverImg"
-                src="/assets/post/3.jpeg"
+                src="https://midu.dev/images/wallpapers/fondo-react-horizontal-4k.png"
                 alt=""
               />
               <img

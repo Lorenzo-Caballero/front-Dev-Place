@@ -1,5 +1,6 @@
 import "./post.css";
-import { MoreVert, Bookmark } from "@material-ui/icons";
+import {  Bookmark } from "@material-ui/icons";
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 //import { Users } from "../../dummyData";
 import { useState } from "react";
 
@@ -13,6 +14,14 @@ function Post(post) {
   const likeHandler = () => {
     setLike(isLiked ? like - 1 : like + 1)
     setIsLiked(!isLiked)
+  }
+  const [save, setSave] = useState(0)
+  const [isSaved, setIsSave] = useState(false)
+
+  const saveHandler = () => {
+    setSave(isSaved ? save -1 : save +1)
+    setIsSave(!isSaved)
+
   }
   return (
     <Card className="text-center">
@@ -28,11 +37,16 @@ function Post(post) {
       <Card.Footer className="text-muted">
         2 days ago
            <div className="postBottomLeft">
-            <img className="likeIcon" src="assets/like.png" onClick={likeHandler} alt="" />
-            <Bookmark className="sidebarIcon" onClick={likeHandler} >
-            </Bookmark>
+           <ThumbUpIcon className="sidebarIcon" onClick={likeHandler} >
+            </ThumbUpIcon>  
             <span className="postLikeCounter">{like} people like it</span>
           </div>
+          <div className="postBottomLeft">
+
+          <Bookmark className="sidebarIcon" onClick={saveHandler} >
+            </Bookmark>            <span className="postLikeCounter">{save} Save it</span>
+          </div>
+
       </Card.Footer>
     </Card>
   );

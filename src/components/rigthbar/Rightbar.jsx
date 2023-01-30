@@ -1,95 +1,57 @@
 import "./rightbar.css";
-import { Users } from "../../dummyData";
-import Online from "../online/Online";
+import ProfileRightbarFollowing from '../profileRightbarFollowing/ProfileRightbarFollowing'
+import Card from 'react-bootstrap/Card';
 
 export default function Rightbar({ profile }) {
-  const HomeRightbar = () => {
-    return (
-      <>
-        <div className="birthdayContainer">
-          <img className="birthdayImg" src="assets/gift.png" alt="" />
-          <span className="birthdayText">
-            <b>Pola Foster</b> and <b>3 other friends</b> have a birhday today.
-          </span>
-        </div>
-        <img className="rightbarAd" src="assets/ad.png" alt="" />
-        <h4 className="rightbarTitle">Online Friends</h4>
-        <ul className="rightbarFriendList">
-          {Users.map((u) => (
-            <Online key={u.id} user={u} />
-          ))}
-        </ul>
-      </>
-    );
-  };
 
   const ProfileRightbar = () => {
     return (
       <>
-        <h4 className="rightbarTitle">User information</h4>
-        <div className="rightbarInfo">
-          <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">City:</span>
-            <span className="rightbarInfoValue">New York</span>
-          </div>
-          <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">From:</span>
-            <span className="rightbarInfoValue">Madrid</span>
-          </div>
-          <div className="rightbarInfoItem">
-            <span className="rightbarInfoKey">Relationship:</span>
-            <span className="rightbarInfoValue">Single</span>
-          </div>
-        </div>
+      
+
+
+
+    <Card style={{ width: '18rem' }}>
+      <Card.Body>
+
+        <Card.Title>User information</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">City:</Card.Subtitle>
+        <span className="infoResponse">New York</span>
+
+        <Card.Subtitle className="mb-2 text-muted">About me: </Card.Subtitle>
+        <Card.Text>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Card.Text>
+         <Card.Subtitle className="mb-2 text-muted">From: </Card.Subtitle>
+         <span className="infoResponse">Argentina</span>
+
+         <Card.Subtitle className="mb-2 text-muted">Relationship: </Card.Subtitle>
+        <span className="infoResponse">Single</span>
+
+      </Card.Body>
+    </Card>
+
+     
         <h4 className="rightbarTitle">User friends</h4>
         <div className="rightbarFollowings">
           <div className="rightbarFollowing">
-            <img
-              src="assets/person/1.jpeg"
-              alt=""
-              className="rightbarFollowingImg"
-            />
-            <span className="rightbarFollowingName">John Carter</span>
+         <ProfileRightbarFollowing/>
           </div>
+        </div>
+        <div className="rightbarFollowings">
           <div className="rightbarFollowing">
-            <img
-              src="assets/person/2.jpeg"
-              alt=""
-              className="rightbarFollowingImg"
-            />
-            <span className="rightbarFollowingName">John Carter</span>
+         <ProfileRightbarFollowing/>
           </div>
+        </div> <div className="rightbarFollowings">
           <div className="rightbarFollowing">
-            <img
-              src="assets/person/3.jpeg"
-              alt=""
-              className="rightbarFollowingImg"
-            />
-            <span className="rightbarFollowingName">John Carter</span>
+         <ProfileRightbarFollowing/>
           </div>
+        </div> <div className="rightbarFollowings">
           <div className="rightbarFollowing">
-            <img
-              src="assets/person/4.jpeg"
-              alt=""
-              className="rightbarFollowingImg"
-            />
-            <span className="rightbarFollowingName">John Carter</span>
+         <ProfileRightbarFollowing/>
           </div>
+        </div> <div className="rightbarFollowings">
           <div className="rightbarFollowing">
-            <img
-              src="assets/person/5.jpeg"
-              alt=""
-              className="rightbarFollowingImg"
-            />
-            <span className="rightbarFollowingName">John Carter</span>
-          </div>
-          <div className="rightbarFollowing">
-            <img
-              src="assets/person/6.jpeg"
-              alt=""
-              className="rightbarFollowingImg"
-            />
-            <span className="rightbarFollowingName">John Carter</span>
+         <ProfileRightbarFollowing/>
           </div>
         </div>
       </>
@@ -98,7 +60,7 @@ export default function Rightbar({ profile }) {
   return (
     <div className="rightbar">
       <div className="rightbarWrapper">
-        {profile ? <ProfileRightbar /> : <HomeRightbar />}
+      <ProfileRightbar /> 
       </div>
     </div>
   );
